@@ -1,4 +1,5 @@
 node('HMS && QA'){
+    properties([pipelineTriggers([cron('30 * * * 1-5')])])
     stage('VCS'){
     //get the latest git code
     git url: 'https://github.com/aavulasrivani/game-of-life.git',
